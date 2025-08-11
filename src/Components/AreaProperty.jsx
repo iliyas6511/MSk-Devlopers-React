@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 // Area property data. You can extend or update this list.
 const properties = [
@@ -34,7 +35,10 @@ const properties = [
     },
 ];
 
+
+
 const AreaProperty = () => {
+    const Navigate = useNavigate()
     return (
         <section className="pt-36 bg-[#F6FAFF]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,7 +54,8 @@ const AreaProperty = () => {
                         {properties.map((item) => (
                             <div
                                 key={item.name}
-                                className="flex flex-row items-center  gap-8"
+                                className="flex flex-row items-center  gap-8 cursor-pointer"
+                                onClick={() => {Navigate("/city")}}
                             >
                                 <img
                                     src={item.image}

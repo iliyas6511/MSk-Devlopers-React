@@ -129,14 +129,14 @@ const PremiumProperty = () => {
                     {/* Left Arrow */}
                     <button
                         onClick={handlePrev}
-                        className="hidden sm:flex absolute left-[-38px] sm:left-[-80px] top-1/2 -translate-y-1/2 z-10
-          bg-lightblue  p-4 rounded-md  hover:bg-blue-50"
+                        className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 z-10
+          bg-lightblue  p-4 rounded-full shadow-lg  hover:bg-blue-50"
                         aria-label="Previous"
                     >
                         <FaArrowLeftLong className="text-darkblue text-lg" />
                     </button>
                     {/* Slider Cards */}
-                    <div className={`w-full`}>
+                    <div className={`w-full px-4 sm:px-6`}>
                         <div
                             className={`
               grid gap-6 
@@ -147,7 +147,7 @@ const PremiumProperty = () => {
                             {visible.map((prop, idx) => (
                                 <div
                                     key={prop.id}
-                                    className="bg-white rounded-md transition overflow-hidden flex flex-col shadow-[5px_2px_15px_#D9EEFE]"
+                                    className="bg-white cursor-pointer rounded-md transition overflow-hidden flex flex-col shadow-[5px_2px_15px_#D9EEFE]"
                                 >
                                     <div className="relative group">
                                         <img
@@ -219,8 +219,8 @@ const PremiumProperty = () => {
                     {/* Right Arrow */}
                     <button
                         onClick={handleNext}
-                        className="hidden sm:flex absolute right-[-38px] sm:right-[-80px] top-1/2 -translate-y-1/2 z-10
-          bg-lightblue  p-4 rounded-md  hover:bg-blue-50"
+                        className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 z-10
+          bg-lightblue  p-4 rounded-full shadow-lg  hover:bg-blue-50"
                         aria-label="Next"
                     >
                         <FaArrowRightLong className="text-darkblue text-lg" />

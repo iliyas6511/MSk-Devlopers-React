@@ -151,7 +151,7 @@ const LatestProperties = () => {
                 {properties.map((prop) => (
                     <div
                         key={prop.id}
-                        className="bg-white rounded-md  transition overflow-hidden flex flex-col shadow-[5px_2px_15px_#D9EEFE]"
+                        className="bg-white rounded-md  transition overflow-hidden flex flex-col shadow-[5px_2px_15px_#D9EEFE] cursor-pointer"
                     >
                         <div className="relative group">
                             <img
@@ -217,7 +217,7 @@ const LatestProperties = () => {
             </div>
             {/* Load more */}
             <div className="flex justify-center mt-8">
-                <button className="bg-darkblue text-white px-10 py-3 rounded font-medium text-sm hover:bg-blue-700 flex items-center gap-2">
+                <button className="bg-darkblue text-white px-10 py-3 cursor-pointer rounded font-medium text-sm hover:bg-blue-700 flex items-center gap-2">
                     Load More Listings
                 </button>
             </div>
