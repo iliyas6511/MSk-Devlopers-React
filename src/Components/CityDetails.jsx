@@ -47,7 +47,8 @@ const CityDetails = () => {
                     <div className="grid grid-cols-12">
                         {/* Left: City List */}
                         <div className="col-span-3 relative">
-                            <div className="sticky top-0 py-6 transition-all duration-500">
+                            <div className={`sticky transition-all duration-1000 py-6 flex flex-col 
+      ${scrollY > 0 ? 'items-start top-20' : 'items-start top-0'}`}>
                                 {cities.map(city => (
                                     <div
                                         key={city}

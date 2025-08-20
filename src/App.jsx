@@ -26,6 +26,9 @@ import ProjectDetailsPage from './Pages/ProjectDetailsPage';
 import ContactusPage from './Pages/ContactusPage';
 import AboutUS from './Pages/AboutUS';
 import ChairmanMsg from './Pages/ChairmanMsg';
+import Adminpanel from './Pages/Adminpanel';
+import AdminDashboard from './Components/AdminPanel/AdminDashboard';
+import AddProperty from './Components/AdminPanel/AddProperty';
 
 
 function App() {
@@ -41,6 +44,11 @@ function App() {
             <Route path="/contactus" element={<ContactusPage />} />
             <Route path="/aboutus" element={<AboutUS />} />
             <Route path="/chairmans-message" element={<ChairmanMsg />} />
+            
+          </Route>
+          <Route path="/" element={<Adminpanel />} >
+                <Route path="/adminpanel" element={<AdminDashboard />} />
+                <Route path="/Add-property" element={<AddProperty />} />
           </Route>
         </Routes>
       </Router>
