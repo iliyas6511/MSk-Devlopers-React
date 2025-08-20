@@ -36,9 +36,9 @@ const Banner = () => {
                     </div> */}
                 </div>
 
-                <div className='absolute  w-full z-[10] bottom-[10px] '>
+                {/* <div className='absolute  w-full z-[10] bottom-[10px] '>
                     <Searchbar />
-                </div>
+                </div> */}
 
             </div>
 

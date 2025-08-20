@@ -145,9 +145,9 @@ const Menubar = ({ isScrolled }) => {
               <Link to="/contactus">
                 <p className="hover:text-gray-300 text-lg font-medium">Contact Us</p>
               </Link>
-              <Link to="/adminpanel">
+              {/* <Link to="/adminpanel">
                 <p className="hover:text-gray-300 text-lg font-medium">Admin</p>
-              </Link>
+              </Link> */}
             </div>
             <div className="hidden md:flex items-center space-x-6">
               <div className='flex items-center gap-1'>
