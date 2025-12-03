@@ -29,26 +29,41 @@ import ChairmanMsg from './Pages/ChairmanMsg';
 import Adminpanel from './Pages/Adminpanel';
 import AdminDashboard from './Components/AdminPanel/AdminDashboard';
 import AddProperty from './Components/AdminPanel/AddProperty';
+import DataProperty from './Components/AdminPanel/DataProperty'; 
+import AddCity from './Components/AdminPanel/AddCity';
+import DataCities from './Components/AdminPanel/DataCities';
+import LoginPage from './Components/AdminPanel/LoginPage';
+import CitydetailsPageAPI from './Pages/CitydetailsPageAPI';
+import Filters from './Components/Filters';
+import ProtectedRoute from "./Components/ProtectedRoute"; 
 
 
 function App() {
 
   return (
     <>
+    
       <Router>
         <Routes>
+          <Route path="/login" element={<LoginPage />} />
           <Route element={<Layout />}>
             <Route path="/" element={<Homepage />} />
             <Route path="/city" element={<CitydetailsPage />} />
-            <Route path="/projects" element={<ProjectDetailsPage />} />
+            <Route path="/cityapi" element={<CitydetailsPageAPI />} /> 
+            {/* <Route path="/projects" element={<ProjectDetailsPage />} /> */}
+            <Route path="/filter" element={<Filters />} />
+            <Route path="/projects/:id" element={<ProjectDetailsPage />} />
             <Route path="/contactus" element={<ContactusPage />} />
             <Route path="/aboutus" element={<AboutUS />} />
             <Route path="/chairmans-message" element={<ChairmanMsg />} />
             
           </Route>
-          <Route path="/" element={<Adminpanel />} >
+          <Route path="/" element={<ProtectedRoute><Adminpanel /></ProtectedRoute>} >
                 <Route path="/adminpanel" element={<AdminDashboard />} />
                 <Route path="/Add-property" element={<AddProperty />} />
+                <Route path="/Data-property" element={<DataProperty />} />
+                <Route path="/Add-city" element={<AddCity />} />
+                <Route path="/Data-cities" element={<DataCities />} />
           </Route>
         </Routes>
       </Router>

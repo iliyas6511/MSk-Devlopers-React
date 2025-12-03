@@ -1,15 +1,21 @@
 import React, { useState } from 'react'
 
+import { FaBuilding, FaHandshake, FaAward, FaTools } from "react-icons/fa";
+
+
+
+
+
 const HeroSection = () => {
 
   return (
     <>
       <div className='w-full'>
         <div className='h-[80vh] relative'>
-          <div className='absolute inset-0 bg-black opacity-20'></div>
+          <div className='absolute inset-0 bg-black opacity-50'></div>
           <img
             className='w-full h-full object-cover'
-            src="https://cdn.brookfieldresidential.net/-/media/brp/global/modules/news-and-blog/corporate/stylish-conference-call-backgrounds/sleek--modern-great-room-at-barefoot-lakes-in-firestone-colorado-1600-x-1067.jpg?rev=97c5f71d477b4e34b8b3693553c8699c"
+            src="/Images/about-us-banner.jpg"
             alt="Project Background"
           />
         </div>
@@ -19,43 +25,108 @@ const HeroSection = () => {
 }
 
 
-import { FaBullseye, FaEye, FaGem, FaTools } from "react-icons/fa";
+const AboutUs = () => {
+
+  return (
+    <>
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 ">
+          <div className='grid grid-cols-12 gap-5'>
+            <div className='col-span-12 md:col-span-7'>
+              <div className="my-4">
+                {/* Title */}
+                <h2 className="text-3xl font-medium text-lightblack text-left">About MSK</h2>
+
+
+              </div>
+
+              {/* Richer descriptive paragraphs placed above the grid (keeps structure you provided) */}
+              <div className="space-y-4 text-left max-w-3xl mx-auto">
+                {/* Intro / Above-normal about-us paragraph (rich, premium, same color scheme) */}
+                <p className="text-left text-[14px] text-darkgray  leading-relaxed">
+                  Established in 2004 and headquartered in Panaji, <span className="font-medium text-lightblack">MSK Builders Goa</span> is
+                  a leading real estate developer and contracting firm dedicated to delivering state-of-the-art residential
+                  and commercial properties across North Goa. We build with care, precision, and long-term value in mind —
+                  blending superior workmanship with practical design to create homes and projects that truly uplift lifestyles.
+                </p>
+
+                <p className="text-[14px] text-darkgray leading-relaxed">
+                  MSK Builders focuses on high-quality developments that enhance the present and prepare communities for the future.
+                  Our projects prioritize durability, thoughtful detailing, and excellent value so that buyers and investors
+                  receive both a superior product and a confident ownership experience.
+                </p>
+                <p className="text-[14px] text-darkgray leading-relaxed">
+                  In a competitive market, we stand out for consistent delivery, timely completion, and a wide service offering —
+                  from civil contracting and roofing to professional waterproofing solutions. Our team of experienced professionals
+                  ensures projects complete on schedule without compromising standards.
+                </p>
+                {/* <p className="text-[14px] text-darkgray leading-relaxed">
+                  Located at <span className="font-medium text-lightblack">8th Floor, 817 Patto Plaza, Panaji, Goa — 403001</span>,
+                  MSK Builders serves clients locally and across Goa, committed to transparency, customer satisfaction, and building
+                  long-term relationships.
+                </p> */}
+              </div>
+            </div>
+
+
+            <div className='col-span-12 md:col-span-5 h-full'>
+              <div className='relative h-[450px]'>
+                <img
+                  src="/Images/about-us-right.png"
+                  alt="MSK Builders Goa"
+                  className="w-full h-full object-fill"
+                />
+                {/* 20% Black Overlay */}
+                <div className="absolute inset-0 bg-black opacity-40"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </>
+  )
+}
 
 const Statements = () => {
+
+
   const items = [
     {
-      icon: <FaBullseye className="text-blue-600 text-3xl mb-3" />,
+      icon: <FaBuilding className="text-blue-600 text-3xl mb-3" />,
       title: "Our Mission",
-      text: "With over $3.5 Billion in sales, The Waterfront Realty Group is the industry’s top luxury producer, with over 30 years of experience in marketing Seattle’s most prestigious waterfront properties."
+      text: "MSK Builders aims to create state-of-the-art properties that positively impact North Goa’s real estate sector by delivering high-quality spaces that enhance the present and shape the future."
     },
     {
-      icon: <FaEye className="text-blue-600 text-3xl mb-3" />,
+      icon: <FaHandshake className="text-blue-600 text-3xl mb-3" />,
       title: "Our Vision",
-      text: "Due to our unmatched results, expertise, and dedication, The Waterfront Realty Group ranks among the Top 3 agencies in Seattle and the surrounding area. We aim to stay the best for always."
+      text: "To become a trusted name in North Goa by consistently offering homes and projects that bring quality, transparency, and customer satisfaction to the forefront of real estate development."
     },
     {
-      icon: <FaGem className="text-blue-600 text-3xl mb-3" />,
+      icon: <FaAward className="text-blue-600 text-3xl mb-3" />,
       title: "Our Values",
-      text: "With her years of experience, impressive property portfolio, celebrity clientele, and unparalleled knowledge of the market and pedigree estates, Simone estimable business is sophisticated and renowned."
+      text: "Driven by integrity, excellence, and dedication, we focus on delivering durable, innovative, and value-driven construction while earning the faith and trust of our customers."
     },
     {
       icon: <FaTools className="text-blue-600 text-3xl mb-3" />,
-      title: "Our Resources",
-      text: "With her years of experience, impressive property portfolio, celebrity clientele, and unparalleled knowledge of the market and pedigree estates, Simone estimable business is sophisticated and renowned."
+      title: "Our Expertise",
+      text: "Established in 2004, MSK Builders Goa offers comprehensive real estate and contracting services including civil construction, waterproofing, and roofing — managed by a team of skilled professionals."
     }
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-12 bg-white">
       <div className="max-w-5xl mx-auto px-4 space-y-18">
         <div className='space-y-4'>
           {/* Title */}
           <h2 className="text-3xl font-medium text-lightblack text-center">More About Us</h2>
           <p className="text-center text-[14px] text-darkgray max-w-2xl mx-auto">
-            Utilizing her exceptional experience and knowledge of the luxury waterfront markets, Simone
-            serves an extensive and elite worldwide client base.
+            Backed by years of dedication and expertise, MSK Builders Goa transforms visions into lasting landmarks, shaping North Goa’s real estate with unmatched quality and value.
           </p>
         </div>
+
+
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-18">
@@ -77,29 +148,16 @@ import { FaXTwitter } from 'react-icons/fa6';
 
 const MyTeams = () => {
   const members = [
+
     {
-      name: "Lily Bicharm",
-      role: "Realtor",
+      name: "Makbul Kalsur",
+      role: "Chairman",
       listings: "4 listings",
-      img: "https://main.wpresidence.net/wp-content/uploads/2014/05/person3-500x328.webp",
-      desc: "Lily Bicharm is a dedicated and professional real estate agent who specializes in providing...",
-      social: [FaXTwitter, FaLinkedinIn, FaInstagram],
-    },
-    {
-      name: "Samuel Diesel",
-      role: "Commercial Broker",
-      listings: "4 listings",
-      img: "https://main.wpresidence.net/wp-content/uploads/2017/11/person2-500x328.jpg",
+      img: "/Images/Makbul Kalsur Final.png",
       desc: "With a genuine passion for helping clients find their dream homes, Samuel Diesel brings a...",
       social: [FaXTwitter, FaLinkedinIn, FaInstagram],
     },
-    {
-      name: "Dennis Albo",
-      role: "Member ID: 987654321",
-      img: "https://main.wpresidence.net/wp-content/uploads/2014/05/person_sam_davies-500x328.webp",
-      desc: "With a sharp understanding of market trends and a strategic approach to negotiation, Dennis...",
-      social: [FaXTwitter, FaLinkedinIn, FaInstagram],
-    }
+
   ];
 
   return (
@@ -114,8 +172,13 @@ const MyTeams = () => {
           </p>
         </div>
 
+
+
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className='this is for centered-grid hidden md:block'>
+
+          </div>
           {members.map((member, index) => (
             <div key={index} className="bg-white rounded-lg p-2 shadow-[5px_2px_15px_#D9EEFE] overflow-hidden transition group">
               {/* Image */}
@@ -189,52 +252,53 @@ const testimonials = [
   },
 ];
 
-const Testimonials = () => {
-  return (
-    <div className="bg-white py-16 md:py-24 px-4 md:px-8 lg:px-16">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center space-y-4 mb-12">
-          <h2 className="text-2xl font-medium text-lightblack">Testimonials</h2>
-          <p className="mt-2 text-[15px] text-darkgray max-w-2xl mx-auto">
-            Publish the best of your client testimonials and let the world know
-            what a great agent or real estate agency you are. Testimonials build trust.
-          </p>
-        </div>
+// const Testimonials = () => {
+//   return (
+//     <div className="bg-white py-16 md:py-24 px-4 md:px-8 lg:px-16">
+//       <div className="max-w-7xl mx-auto">
+//         <div className="text-center space-y-4 mb-12">
+//           <h2 className="text-2xl font-medium text-lightblack">Testimonials</h2>
+//           <p className="mt-2 text-[15px] text-darkgray max-w-2xl mx-auto">
+//             Publish the best of your client testimonials and let the world know
+//             what a great agent or real estate agency you are. Testimonials build trust.
+//           </p>
+//         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {testimonials.map((t, index) => (
-            <div
-              key={index}
-              className="bg-white p-12 rounded-md shadow-[5px_2px_15px_#D9EEFE]"
-            >
-              <div className="flex items-center gap-4 mb-4">
-                <img
-                  src={t.image}
-                  alt={t.name}
-                  className="w-12 h-12 rounded-full object-cover"
-                />
-                <div>
-                  <h4 className="font-semibold text-[16px] text-lightblack">{t.name}</h4>
-                  <p className="text-sm text-lightgray">{t.location}</p>
-                </div>
-              </div>
-              <p className="text-lightgray text-sm mb-4">{t.message}</p>
-              <div className="flex gap-1 text-[#ffc662]">
-                {[...Array(5)].map((_, i) => (
-                  <FaStar key={i} />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
+//         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+//           {testimonials.map((t, index) => (
+//             <div
+//               key={index}
+//               className="bg-white p-12 rounded-md shadow-[5px_2px_15px_#D9EEFE]"
+//             >
+//               <div className="flex items-center gap-4 mb-4">
+//                 <img
+//                   src={t.image}
+//                   alt={t.name}
+//                   className="w-12 h-12 rounded-full object-cover"
+//                 />
+//                 <div>
+//                   <h4 className="font-semibold text-[16px] text-lightblack">{t.name}</h4>
+//                   <p className="text-sm text-lightgray">{t.location}</p>
+//                 </div>
+//               </div>
+//               <p className="text-lightgray text-sm mb-4">{t.message}</p>
+//               <div className="flex gap-1 text-[#ffc662]">
+//                 {[...Array(5)].map((_, i) => (
+//                   <FaStar key={i} />
+//                 ))}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
 
 
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import Testimonials from '../Components/Testimonials';
 
 const faqs = [
 
@@ -431,7 +495,12 @@ const ContactForm = () => {
                 {/* Button */}
                 <button
                   type="submit"
-                  className="w-full bg-darkblue hover:bg-blue-600 text-sm text-white py-2 rounded-sm font-medium transition-colors"
+                  onClick={
+                    (e) => {
+                      e.preventDefault()
+                    }
+                  }
+                  className="w-full cursor-pointer bg-darkblue hover:bg-blue-600 text-sm text-white py-2 rounded-sm font-medium transition-colors"
                 >
                   Send Email
                 </button>
@@ -458,6 +527,7 @@ const AboutUS = () => {
   return (
     <>
       <HeroSection />
+      <AboutUs />
       <Statements />
       <MyTeams />
       <Testimonials />

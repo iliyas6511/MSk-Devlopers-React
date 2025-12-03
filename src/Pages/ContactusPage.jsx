@@ -9,7 +9,7 @@ const HeroSection = () => {
                     <div className='absolute inset-0 bg-black opacity-20'></div>
                     <img
                         className='w-full h-full object-fill'
-                        src="https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg"
+                        src="/Images/MSK Office.png"
                         alt="Project Background"
                     />
                 </div>
@@ -23,7 +23,7 @@ const Contactus = () => {
         <div className="relative  bg-opacity-90 py-10 px-4">
             <div className="max-w-4xl mx-auto text-center  ">
                 <h1 className='inline-block px-10 md:px-22 text-2xl font-medium text-lightblack py-6 border-b border-b-gray-300 tracking-wider'>
-                    Call Us On : <span className='text-darkblue'>+91 90 2823 6776</span>
+                    Call Us On : <span className='text-darkblue'>+91 90 9605 8400</span>
                 </h1>
                 <h2 className="block py-6   text-[18px] md:text-[16px] font-medium text-lightblack max-w-[600px] mx-auto">
                     How can we help you?
@@ -72,7 +72,7 @@ const Contactus = () => {
                     <div className="w-full group relative">
                         <button
                             type="submit"
-                            className="relative z-10 w-full overflow-hidden border border-transparent group-hover:border-darkblue 
+                            className="relative z-10 cursor-pointer w-full overflow-hidden border border-transparent group-hover:border-darkblue 
                bg-darkblue text-white font-medium py-3 px-6 rounded-sm transition-colors duration-500"
                         >
                             <span className="relative z-10 transition-colors duration-500 group-hover:text-darkblue">
@@ -99,7 +99,7 @@ const LocationSection = () => {
   return (
     <div className='max-w-7xl mx-auto py-12'>
         <div>
-            <h2 className="text-2xl font-regular text-lightblack border-b border-gray-300 tracking-wide py-4">CORPORATE OFFICE</h2>
+            <h2 className="text-2xl font-regular px-4 text-lightblack border-b border-gray-300 tracking-wide py-4">CORPORATE OFFICE</h2>
         </div>
     <div className="flex flex-col lg:flex-row items-start justify-between gap-8 p-6 border-b border-gray-300">
       {/* Left Section - Address */}
@@ -111,10 +111,10 @@ const LocationSection = () => {
           <p>Dempo Trade Center, patto, Patto Centre,</p>
           <p>Panaji, Goa - 403001</p>
           <p className="flex items-center gap-2">
-            <FaPhoneAlt className="text-gray-600" /> +91 90 2823 6776
+            <FaPhoneAlt className="text-gray-600" /> +91 90960 58400
           </p>
           <p className="flex items-center gap-2">
-            <FaEnvelope className="text-gray-600" /> mskbuildingsystem@gmail.com
+            <FaEnvelope className="text-gray-600" /> mskbuildingsystems@gmail.com
           </p>
         </div>
 

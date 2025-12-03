@@ -34,27 +34,7 @@ const AdminNavbar = () => {
                   timeoutRef.current = setTimeout(() => setIsOpen(false), 200);
                 }}
               >
-                {/* Main menu item as Link */}
-                <Link
-                  to="/aboutus"
-                  className="hover:text-gray-300 text-lg font-medium flex items-center"
-                >
-                  About Us
-                  <svg
-                    className={`ml-1 w-4 h-4 transform transition-transform ${isOpen ? "rotate-180" : "rotate-0"}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </Link>
-
+              
                 {/* Dropdown menu */}
                 {isOpen && (
                   <div
@@ -78,10 +58,10 @@ const AdminNavbar = () => {
                 )}
               </div>
 
-              <Link to="/projects">
+              <Link to="/filter">
                 <p className="hover:text-gray-300 text-lg font-medium">Projects</p>
               </Link>
-              <Link to="/city">
+              <Link to="/cityapi">
                 <p className="hover:text-gray-300 text-lg font-medium">City</p>
               </Link>
               <Link to="/contactus">
@@ -94,7 +74,7 @@ const AdminNavbar = () => {
             <div className="hidden md:flex items-center space-x-6">
               <div className='flex items-center gap-1'>
                 <MdCall className="text-[22px] text-white" />
-                <a href="tel:+919028236776" className="hover:text-gray-300 text-lg">+919028236776</a>
+                <a href="tel:+919096058400" className="hover:text-gray-300 text-lg">+91 90960 58400</a>
               </div>
               <button className="bg-blue-500 hover:bg-blue-700 text-white text-sm font-medium py-1.5 px-4 rounded">Get In Touch</button>
             </div>

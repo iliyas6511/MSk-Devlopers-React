@@ -52,7 +52,7 @@ const Contactus = () => {
                     <div className="w-full group relative">
                         <button
                             type="submit"
-                            className="relative z-10 w-full overflow-hidden border border-transparent group-hover:border-darkblue 
+                            className="relative cursor-pointer z-10 w-full overflow-hidden border border-transparent group-hover:border-darkblue 
                bg-darkblue text-white font-medium py-3 px-6 rounded-sm transition-colors duration-500"
                         >
                             <span className="relative z-10 transition-colors duration-500 group-hover:text-darkblue">

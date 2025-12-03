@@ -5,7 +5,7 @@ const Searchbar = () => {
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
-  };
+  }; 
 
   const categories = [
     'Property Category',

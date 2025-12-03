@@ -26,7 +26,7 @@ const Homepage = () => {
 
             <PremiumProperty />
 
-            <FeaturedProperty />
+            {/* <FeaturedProperty /> */}
 
             <GoaFullyImages />
 

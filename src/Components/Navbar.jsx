@@ -31,26 +31,26 @@ const SocialBar = () => {
             </div>
           </div>
           <div className="flex space-x-4 h-full items-center">
-            <div className="border-r border-borderLight flex items-center gap-1 py-2 pr-4 h-full">
+            {/* <div className="border-r border-borderLight flex items-center gap-1 py-2 pr-4 h-full">
               <FaHeart className="text-white text-sm" />
               <span className="text-white text-sm leading-none">Favorites</span>
-            </div>
+            </div> */}
             <div className="border-r border-borderLight flex items-center gap-1 py-2 pr-4 h-full">
               <IoMail className="text-white text-sm" />
               <a
-                href="mailto:mskbuildingsystem@gmail.com"
+                href="mailto:mskbuildingsystems@gmail.com"
                 className="text-white text-sm leading-none hover:text-gray-300"
               >
-                mskbuildingsystem@gmail.com
+                mskbuildingsystems@gmail.com
               </a>
             </div>
             <div className="flex items-center gap-1 py-2 h-full">
               <FaWhatsapp className="text-white text-sm" />
               <a
-                href="tel:+9225906776"
+                href="tel:+919096058400"
                 className="text-white text-sm leading-none hover:text-gray-300"
               >
-                +9225 906 776
+                +91 90960 58400
               </a>
             </div>
           </div>
@@ -61,21 +61,30 @@ const SocialBar = () => {
 }
 
 import companyLogo from "../assets/Companyimages/companyLogo.png"
+import navbar_logo from "../assets/Companyimages/navbar_logo.jpeg"
 import { MdCall } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
+import { IoMdClose } from 'react-icons/io';
+
+
+
+
 const Menubar = ({ isScrolled }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
   const timeoutRef = useRef(null);
 
   return (
     <>
-      <nav className={`w-full ${isScrolled ? 'bg-black opacity-90 text-white shadow-[5px_2px_15px_#D9EEFE] ' : ''} text-white transition-all duration-300`}>
+      <nav className={`w-full ${isMenuOpen ? 'max-md:bg-extradarkblue' : ''} ${isScrolled ? 'bg-black opacity-90 text-white shadow-[5px_2px_15px_#D9EEFE] ' : ''} text-white transition-all duration-300`}>
         <div className="container mx-auto">
           <div className='  py-2 px-4 md:px-10 flex justify-between items-center'>
             <div className="flex items-center">
-              <img src={companyLogo} alt="MSK Builders Logo" className="mr-2" />
+              <Link to={"/"}>
+                <img src={companyLogo} alt="MSK Builders Logo" className="mr-2" />
+              </Link>
             </div>
             <div className="hidden md:flex md:items-center md:gap-10">
               <Link to="/">
@@ -136,10 +145,10 @@ const Menubar = ({ isScrolled }) => {
                 )}
               </div>
 
-              <Link to="/projects">
+              <Link to="/filter">
                 <p className="hover:text-gray-300 text-lg font-medium">Projects</p>
               </Link>
-              <Link to="/city">
+              <Link to="/cityapi">
                 <p className="hover:text-gray-300 text-lg font-medium">City</p>
               </Link>
               <Link to="/contactus">
@@ -152,12 +161,23 @@ const Menubar = ({ isScrolled }) => {
             <div className="hidden md:flex items-center space-x-6">
               <div className='flex items-center gap-1'>
                 <MdCall className="text-[22px] text-white" />
-                <a href="tel:+919028236776" className="hover:text-gray-300 text-lg">+919028236776</a>
+                <a href="tel:+919096058400" className="hover:text-gray-300 text-lg">+91 90960 58400</a>
               </div>
-              <button className="bg-blue-500 hover:bg-blue-700 text-white text-sm font-medium py-1.5 px-4 rounded">Get In Touch</button>
+              <Link to={"/contactus"}>
+                <button className="cursor-pointer bg-blue-500 hover:bg-blue-700 text-white text-sm font-medium py-1.5 px-4 rounded">Get In Touch</button>
+              </Link>
             </div>
-            <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              <GiHamburgerMenu className='text-[20px]' />
+
+            {/* Hamburger / Close Button */}
+            <button
+              className="md:hidden text-white"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? (
+                <IoMdClose className="text-[26px]" /> // ✅ Close icon when open
+              ) : (
+                <GiHamburgerMenu className="text-[22px]" />
+              )}
             </button>
           </div>
         </div>
@@ -165,17 +185,104 @@ const Menubar = ({ isScrolled }) => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden text-white p-4 space-y-2">
-          <a href="#home" className="block hover:text-gray-300">Home</a>
-          <a href="#about" className="block hover:text-gray-300">About Us</a>
-          <a href="#projects" className="block hover:text-gray-300">Projects</a>
-          <a href="#contact" className="block hover:text-gray-300">Contact Us</a>
+        <div className="md:hidden bg-extradarkblue text-white p-4 space-y-2 h-screen overflow-hidden transition-all duration-300 ease-in-out">
+          <div className='flex flex-col gap-5'>
+            {/* Home */}
+            <Link to="/" onClick={() => setIsMenuOpen(false)}>
+              <p className="block text-md font-medium hover:text-gray-300">Home</p>
+            </Link>
 
-          <div className='flex items-center gap-1'>
-            <MdCall className="text-[22px] text-white" />
-            <a href="tel:+919028236776" className="hover:text-gray-300 text-lg">+919028236776</a>
+            {/* About Us Dropdown */}
+            <div>
+              <button
+                onClick={() => setIsAboutOpen(!isAboutOpen)}
+                className="w-full flex justify-between items-center text-md font-medium hover:text-gray-300 focus:outline-none"
+              >
+                <span>About Us</span>
+                <svg
+                  className={`w-4 h-4 transform transition-transform duration-300 ${isAboutOpen ? "rotate-180" : "rotate-0"
+                    }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+
+              <div
+                className={`overflow-hidden space-y-2 transition-all duration-300 ease-in-out ${isAboutOpen ? "max-h-40 mt-2" : "max-h-0"
+                  }`}
+              >
+                <div className="ml-4 pl-3 space-y-1">
+                  <Link
+                    to="/aboutus"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      setIsAboutOpen(false);
+                    }}
+                    className="block text-sm hover:text-gray-300"
+                  >
+                    About Us
+                  </Link>
+                </div>
+                <div className="ml-4 pl-3 space-y-1">
+                  <Link
+                    to="/chairmans-message"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      setIsAboutOpen(false);
+                    }}
+                    className="block text-sm hover:text-gray-300"
+                  >
+                    Chairman's Message
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Projects */}
+            <Link to="/filter" onClick={() => setIsMenuOpen(false)}>
+              <p className="block text-md font-medium hover:text-gray-300">
+                Projects
+              </p>
+            </Link>
+
+            {/* City */}
+            <Link to="/cityapi" onClick={() => setIsMenuOpen(false)}>
+              <p className="block text-md font-medium hover:text-gray-300">City</p>
+            </Link>
+
+            {/* Contact */}
+            <Link to="/contactus" onClick={() => setIsMenuOpen(false)}>
+              <p className="block text-md font-medium hover:text-gray-300">
+                Contact Us
+              </p>
+            </Link>
+
+            {/* Phone */}
+            <div className="flex items-center gap-1 pt-2 border-t border-gray-700">
+              <MdCall className="text-[22px] text-white" />
+              <a
+                href="tel:+919096058400"
+                className="hover:text-gray-300 text-lg"
+              >
+                +91 90960 58400
+              </a>
+            </div>
+
+            {/* Button */}
+            <Link to="/contactus" onClick={() => setIsMenuOpen(false)}>
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">
+                Get In Touch
+              </button>
+            </Link>
           </div>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">Get In Touch</button>
         </div>
       )}
     </>

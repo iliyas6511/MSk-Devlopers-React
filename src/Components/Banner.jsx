@@ -12,7 +12,7 @@ const Banner = () => {
                 {/* Background Video */}
                 <video
                     className="absolute inset-0 w-full h-full object-cover"
-                    src="/Videos/sample.mp4"// replace with your video URL
+                    src="/Videos/msk.mp4"// replace with your video URL
                     autoPlay
                     loop
                     muted
