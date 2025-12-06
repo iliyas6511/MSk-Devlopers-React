@@ -27,7 +27,6 @@ const FloorPlans = ({ editData, newPropId, onUploadSuccess, onUploadError }) => 
       const fetchFileData = async () => {
         try {
           const response = await api.get(`/propdocs/${propId}`);
-          console.log("Fetched file data:", response.data); // Debug log
           if (Array.isArray(response.data) && response.data.length > 0) {
             const data = response.data[0]; // Take the first item since it's an array
             setFileData({

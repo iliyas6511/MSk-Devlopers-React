@@ -13,11 +13,11 @@ const ProjectDetails = ({ id }) => {
   const fetchPropertyDetails = async () => {
     try {
       const response = await api.get(`property_details/${id}`);
-      // console.log('Response:', response.data); // Log the response data
+      
       setPropertyData(response.data); // Use response.data directly
       setLoading(false);
     } catch (err) {
-      // console.error('Error:', err.message); // Log the error
+      
       setError(err.message || 'Failed to fetch property details');
       setLoading(false);
     }

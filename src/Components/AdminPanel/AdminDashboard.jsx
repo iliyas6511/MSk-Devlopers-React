@@ -12,9 +12,9 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchDashboardData = async () => {
       try {
-        console.log('Fetching /dashboard...'); // Debug log
+        
         const response = await api.get('/dashboard');
-        console.log('Response:', response.data); // Log success
+         // Log success
         setDashboardData(response.data);
         setLoading(false);
       } catch (err) {

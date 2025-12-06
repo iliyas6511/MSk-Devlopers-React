@@ -15,7 +15,6 @@ const DataProperty = () => {
   const fetchData = async () => {
     try {
       const propRes = await api.get("/properties");
-      console.log("Fetched properties:", propRes.data);
       setProperties(propRes.data);
 
       const cityRes = await api.get("/cities");
@@ -24,7 +23,6 @@ const DataProperty = () => {
         return acc;
       }, {});
       setCities(cityMap);
-      console.log("Fetched cities:", cityMap);
     } catch (error) {
       setMessage({
         type: "error",
@@ -61,7 +59,6 @@ const DataProperty = () => {
   };
 
   const handleEdit = (property) => {
-    console.log("Editing property:", property);
     navigate("/Add-property", { state: { property } });
   };
 

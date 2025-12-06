@@ -155,7 +155,6 @@ const ListingMedia = ({ editData, newPropId, onUploadSuccess, onUploadError }) =
   const openFile = (filename) => {
     if (filename) {
       const url = storageUrl(`/property_gallery/${filename}`);
-      console.log("Opening URL:", url); // Debug log
       window.open(url, "_blank");
     }
   };
